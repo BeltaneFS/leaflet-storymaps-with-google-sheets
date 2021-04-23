@@ -140,6 +140,16 @@ $(window).on('load', function() {
     var overlay;  // URL of the overlay for in-focus chapter
     var geoJsonOverlay;
 
+    var torchMarker = L.icon({
+        iconUrl: 'media/markers/torch_marker.png',
+        shadowUrl: 'media/markers/torch_marker_shadow_blurred.png',
+
+        iconSize:     [33, 66], // size of the icon
+        shadowSize:   [39, 32], // size of the shadow
+        iconAnchor:   [17, 58], // point of the icon which will correspond to marker's location
+        shadowAnchor: [3, 33],  // the same for the shadow
+    });
+
     for (i in chapters) {
       var c = chapters[i];
 
@@ -148,14 +158,20 @@ $(window).on('load', function() {
         var lon = parseFloat(c['Longitude']);
 
         chapterCount += 1;
+        function generateMarker(id) {
+            if (id == "") {
+                return torchMarker
+            }
+            return L.icon({
+               iconUrl: 'media/markers/' + id + 'marker.png',
+               iconSize:     [50, 50], // size of the icon
+               iconAnchor:   [25, 48], // point of the icon which will correspond to marker's location
+            });
+        }
 
         markers.push(
           L.marker([lat, lon], {
-            icon: L.ExtraMarkers.icon({
-              icon: 'fa-number',
-              number: c['Marker'] === 'Plain' ? '' : chapterCount,
-              markerColor: c['Marker Color'] || 'blue'
-            }),
+            icon: generateMarker(c['Marker Color']),
             opacity: c['Marker'] === 'Hidden' ? 0 : 0.9,
             interactive: c['Marker'] === 'Hidden' ? false : true,
           }
@@ -170,7 +186,6 @@ $(window).on('load', function() {
         id: 'container' + i,
         class: 'chapter-container'
       });
-
 
       // Add media and credits: YouTube, audio, or image
       var media = null;
