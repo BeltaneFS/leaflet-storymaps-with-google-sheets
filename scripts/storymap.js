@@ -141,7 +141,7 @@ $(window).on('load', function() {
     var geoJsonOverlay;
 
     var torchMarker = L.icon({
-        iconUrl: 'media/markers/torch_marker.png',
+        iconUrl: 'media/markers/torch_grey.png',
         shadowUrl: 'media/markers/torch_shadow.png',
 
         iconSize:     [33, 66], // size of the icon
