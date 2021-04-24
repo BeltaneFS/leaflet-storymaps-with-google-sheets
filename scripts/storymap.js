@@ -142,12 +142,10 @@ $(window).on('load', function() {
 
     var torchMarker = L.icon({
         iconUrl: 'media/markers/torch_marker.png',
-        shadowUrl: 'media/markers/torch_shadow.png',
-
         iconSize:     [33, 66], // size of the icon
-        shadowSize:   [39, 32], // size of the shadow
+        // shadowSize:   [39, 32], // size of the shadow
         iconAnchor:   [17, 58], // point of the icon which will correspond to marker's location
-        shadowAnchor: [17, 25],  // the same for the shadow
+        // shadowAnchor: [17, 25],  // the same for the shadow
     });
 
     for (i in chapters) {
@@ -164,13 +162,10 @@ $(window).on('load', function() {
             }
             return L.icon({
                iconUrl: 'media/markers/' + id + 'marker_white.png',
-               shadowUrl: 'media/markers/torch_shadow.png',
-              
                iconSize:     [50, 50], // size of the icon
-               shadowSize:   [39, 32], // size of the shadow
+                // shadowSize:   [39, 32], // size of the shadow
                iconAnchor:   [25, 48], // point of the icon which will correspond to marker's location
-               shadowAnchor: [17, 25],  // the same for the shadow
-
+                // shadowAnchor: [17, 25],  // the same for the shadow
             });
         }
 
