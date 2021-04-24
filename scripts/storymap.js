@@ -142,7 +142,7 @@ $(window).on('load', function() {
 
     var torchMarker = L.icon({
         iconUrl: 'media/markers/torch_marker.png',
-        shadowUrl: 'media/markers/torch_marker_shadow_blurred.png',
+        shadowUrl: 'media/markers/torch_shadow.png',
 
         iconSize:     [33, 66], // size of the icon
         shadowSize:   [39, 32], // size of the shadow
