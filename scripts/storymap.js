@@ -147,7 +147,7 @@ $(window).on('load', function() {
         iconSize:     [33, 66], // size of the icon
         shadowSize:   [39, 32], // size of the shadow
         iconAnchor:   [17, 58], // point of the icon which will correspond to marker's location
-        shadowAnchor: [17, 58],  // the same for the shadow
+        shadowAnchor: [17, 3],  // the same for the shadow
     });
 
     for (i in chapters) {
@@ -164,8 +164,13 @@ $(window).on('load', function() {
             }
             return L.icon({
                iconUrl: 'media/markers/' + id + 'marker_white.png',
-               iconSize:     [50, 50], // size of the icon
+               shadowUrl: 'media/markers/torch_shadow.png',
+              
+               iconSize:     [30, 30], // size of the icon
+               shadowSize:   [39, 32], // size of the shadow
                iconAnchor:   [25, 48], // point of the icon which will correspond to marker's location
+               shadowAnchor: [17, 3],  // the same for the shadow
+
             });
         }
 
