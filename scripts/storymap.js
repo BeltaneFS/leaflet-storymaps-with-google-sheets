@@ -161,7 +161,7 @@ $(window).on('load', function() {
                 return torchMarker
             }
             return L.icon({
-               iconUrl: 'media/markers/' + id + 'marker_white.png',
+               iconUrl: 'media/markers/' + id + '_marker.png',
                iconSize:     [50, 50], // size of the icon
                 // shadowSize:   [39, 32], // size of the shadow
                iconAnchor:   [25, 48], // point of the icon which will correspond to marker's location
