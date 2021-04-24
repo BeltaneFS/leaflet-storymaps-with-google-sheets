@@ -147,7 +147,7 @@ $(window).on('load', function() {
         iconSize:     [33, 66], // size of the icon
         shadowSize:   [39, 32], // size of the shadow
         iconAnchor:   [17, 58], // point of the icon which will correspond to marker's location
-        shadowAnchor: [3, 3],  // the same for the shadow
+        shadowAnchor: [30, 33],  // the same for the shadow
     });
 
     for (i in chapters) {
@@ -163,7 +163,7 @@ $(window).on('load', function() {
                 return torchMarker
             }
             return L.icon({
-               iconUrl: 'media/markers/' + id + 'marker.png',
+               iconUrl: 'media/markers/' + id + 'marker_white.png',
                iconSize:     [50, 50], // size of the icon
                iconAnchor:   [25, 48], // point of the icon which will correspond to marker's location
             });
