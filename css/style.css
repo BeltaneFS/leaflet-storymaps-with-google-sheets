@@ -139,7 +139,7 @@ a.source:visited {
   If you want to change the color, see options here: https://github.com/coryasilva/Leaflet.ExtraMarkers/blob/master/src/assets/css/leaflet.extra-markers.css
 */
 .marker-active {
-  filter: drop-shadow(orange 2px 5px 5px)
+  filter: drop-shadow(yellow 2px 5px 5px)
 }
 
 /* Storymap logo image above the title */
